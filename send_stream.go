@@ -6,12 +6,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/lucas-clemente/quic-go/internal/ackhandler"
-	"github.com/lucas-clemente/quic-go/internal/flowcontrol"
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/qerr"
-	"github.com/lucas-clemente/quic-go/internal/utils"
-	"github.com/lucas-clemente/quic-go/internal/wire"
+	"github.com/hugefiver/quic/internal/ackhandler"
+	"github.com/hugefiver/quic/internal/flowcontrol"
+	"github.com/hugefiver/quic/internal/protocol"
+	"github.com/hugefiver/quic/internal/qerr"
+	"github.com/hugefiver/quic/internal/utils"
+	"github.com/hugefiver/quic/internal/wire"
 )
 
 type sendStreamI interface {

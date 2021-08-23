@@ -11,11 +11,11 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/lucas-clemente/quic-go"
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/qtls"
-	"github.com/lucas-clemente/quic-go/internal/utils"
-	"github.com/lucas-clemente/quic-go/quicvarint"
+	"github.com/hugefiver/quic"
+	"github.com/hugefiver/quic/internal/protocol"
+	"github.com/hugefiver/quic/internal/qtls"
+	"github.com/hugefiver/quic/internal/utils"
+	"github.com/hugefiver/quic/quicvarint"
 	"github.com/marten-seemann/qpack"
 )
 

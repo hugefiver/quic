@@ -12,10 +12,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/lucas-clemente/quic-go"
-	quicproxy "github.com/lucas-clemente/quic-go/integrationtests/tools/proxy"
-	"github.com/lucas-clemente/quic-go/internal/utils"
-	"github.com/lucas-clemente/quic-go/logging"
+	"github.com/hugefiver/quic"
+	quicproxy "github.com/hugefiver/quic/integrationtests/tools/proxy"
+	"github.com/hugefiver/quic/internal/utils"
+	"github.com/hugefiver/quic/logging"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

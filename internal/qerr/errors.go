@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/lucas-clemente/quic-go/internal/protocol"
+	"github.com/hugefiver/quic/internal/protocol"
 )
 
 var (
