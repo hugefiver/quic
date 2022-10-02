@@ -1,5 +1,4 @@
-// +build go1.16
-// +build !go1.17
+//go:build go1.19
 
 package qtls
 
@@ -10,7 +9,7 @@ import (
 	"net"
 	"unsafe"
 
-	"github.com/marten-seemann/qtls-go1-16"
+	"github.com/marten-seemann/qtls-go1-19"
 )
 
 type (
@@ -18,7 +17,7 @@ type (
 	Alert = qtls.Alert
 	// A Certificate is qtls.Certificate.
 	Certificate = qtls.Certificate
-	// CertificateRequestInfo contains inforamtion about a certificate request.
+	// CertificateRequestInfo contains information about a certificate request.
 	CertificateRequestInfo = qtls.CertificateRequestInfo
 	// A CipherSuiteTLS13 is a cipher suite for TLS 1.3
 	CipherSuiteTLS13 = qtls.CipherSuiteTLS13
@@ -84,7 +83,7 @@ type cipherSuiteTLS13 struct {
 	Hash   crypto.Hash
 }
 
-//go:linkname cipherSuiteTLS13ByID github.com/marten-seemann/qtls-go1-16.cipherSuiteTLS13ByID
+//go:linkname cipherSuiteTLS13ByID github.com/marten-seemann/qtls-go1-19.cipherSuiteTLS13ByID
 func cipherSuiteTLS13ByID(id uint16) *cipherSuiteTLS13
 
 // CipherSuiteTLS13ByID gets a TLS 1.3 cipher suite.

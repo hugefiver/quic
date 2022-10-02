@@ -8,9 +8,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	quic "github.com/hugefiver/quic"
-	quicproxy "github.com/hugefiver/quic/integrationtests/tools/proxy"
-	"github.com/hugefiver/quic/internal/protocol"
+	"github.com/lucas-clemente/quic-go"
+	quicproxy "github.com/lucas-clemente/quic-go/integrationtests/tools/proxy"
+	"github.com/lucas-clemente/quic-go/internal/protocol"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
@@ -87,9 +87,9 @@ var _ = Describe("Drop Tests", func() {
 						done := make(chan struct{})
 						go func() {
 							defer GinkgoRecover()
-							sess, err := ln.Accept(context.Background())
+							conn, err := ln.Accept(context.Background())
 							Expect(err).ToNot(HaveOccurred())
-							str, err := sess.OpenStream()
+							str, err := conn.OpenStream()
 							Expect(err).ToNot(HaveOccurred())
 							for i := uint8(1); i <= numMessages; i++ {
 								n, err := str.Write([]byte{i})
@@ -98,17 +98,17 @@ var _ = Describe("Drop Tests", func() {
 								time.Sleep(messageInterval)
 							}
 							<-done
-							Expect(sess.CloseWithError(0, "")).To(Succeed())
+							Expect(conn.CloseWithError(0, "")).To(Succeed())
 						}()
 
-						sess, err := quic.DialAddr(
+						conn, err := quic.DialAddr(
 							fmt.Sprintf("localhost:%d", proxy.LocalPort()),
 							getTLSClientConfig(),
 							getQuicConfig(&quic.Config{Versions: []protocol.VersionNumber{version}}),
 						)
 						Expect(err).ToNot(HaveOccurred())
-						defer sess.CloseWithError(0, "")
-						str, err := sess.AcceptStream(context.Background())
+						defer conn.CloseWithError(0, "")
+						str, err := conn.AcceptStream(context.Background())
 						Expect(err).ToNot(HaveOccurred())
 						for i := uint8(1); i <= numMessages; i++ {
 							b := []byte{0}
