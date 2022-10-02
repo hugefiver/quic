@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/utils"
-	list "github.com/lucas-clemente/quic-go/internal/utils/linkedlist"
+	"github.com/hugefiver/quic/internal/protocol"
+	"github.com/hugefiver/quic/internal/utils"
+	list "github.com/hugefiver/quic/internal/utils/linkedlist"
 )
 
 type sentPacketHistory struct {

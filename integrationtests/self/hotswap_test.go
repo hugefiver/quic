@@ -11,10 +11,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/lucas-clemente/quic-go"
-	"github.com/lucas-clemente/quic-go/http3"
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/testdata"
+	"github.com/hugefiver/quic"
+	"github.com/hugefiver/quic/http3"
+	"github.com/hugefiver/quic/internal/protocol"
+	"github.com/hugefiver/quic/internal/testdata"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

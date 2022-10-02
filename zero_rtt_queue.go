@@ -3,7 +3,7 @@ package quic
 import (
 	"time"
 
-	"github.com/lucas-clemente/quic-go/internal/protocol"
+	"github.com/hugefiver/quic/internal/protocol"
 )
 
 type zeroRTTQueue struct {

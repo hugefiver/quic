@@ -7,8 +7,8 @@ import (
 	"net"
 	"sync"
 
-	"github.com/lucas-clemente/quic-go"
-	"github.com/lucas-clemente/quic-go/internal/protocol"
+	"github.com/hugefiver/quic"
+	"github.com/hugefiver/quic/internal/protocol"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

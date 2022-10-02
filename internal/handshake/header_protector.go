@@ -9,8 +9,8 @@ import (
 
 	"golang.org/x/crypto/chacha20"
 
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/qtls"
+	"github.com/hugefiver/quic/internal/protocol"
+	"github.com/hugefiver/quic/internal/qtls"
 )
 
 type headerProtector interface {

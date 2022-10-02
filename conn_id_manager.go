@@ -3,11 +3,11 @@ package quic
 import (
 	"fmt"
 
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/qerr"
-	"github.com/lucas-clemente/quic-go/internal/utils"
-	list "github.com/lucas-clemente/quic-go/internal/utils/linkedlist"
-	"github.com/lucas-clemente/quic-go/internal/wire"
+	"github.com/hugefiver/quic/internal/protocol"
+	"github.com/hugefiver/quic/internal/qerr"
+	"github.com/hugefiver/quic/internal/utils"
+	list "github.com/hugefiver/quic/internal/utils/linkedlist"
+	"github.com/hugefiver/quic/internal/wire"
 )
 
 type newConnID struct {
